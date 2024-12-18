@@ -9,7 +9,7 @@ metadata:
 spec:
   template:
     metadata:
-      replicas: 1
+      replicas: 2
       labels:
         name:  nginx-app
         deployment-cd: flux
