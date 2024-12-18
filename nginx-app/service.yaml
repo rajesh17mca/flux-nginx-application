@@ -12,5 +12,6 @@ spec:
   - port: 80
     targetPort: 80
     protocol: TCP
+    nodeport: 30994
   selector:
     name: nginx-app-deployment
