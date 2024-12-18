@@ -9,11 +9,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 80
-      nodePort: 30080
-      name: http
-    - port: 443
-      nodePort: 30443
-      name: https
+  - port: 80
+    targetPort: 80
+    protocol: TCP
   selector:
     name: nginx-app-deployment
