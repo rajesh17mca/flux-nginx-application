@@ -12,6 +12,9 @@ spec:
     matchLabels:
       name: nginx-app-deployment
   template:
+    metadata:
+      labels:
+        name: nginx-app-deployment
     spec:
       containers:
       - image: nginx
