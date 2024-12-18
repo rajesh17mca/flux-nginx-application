@@ -5,7 +5,6 @@ metadata:
   namespace: nginx-app-namespace
   labels:
     name:  nginx-app-deployment
-    cd-system: flux-cd
 spec:
   replicas: 2
   selector:
