@@ -16,4 +16,4 @@ spec:
       nodePort: 30443
       name: https
   selector:
-    app: nginx-app
+    name: nginx-app-deployment

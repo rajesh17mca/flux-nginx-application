@@ -10,7 +10,7 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: nginx-app
+      name: nginx-app-deployment
   template:
     spec:
       containers:
