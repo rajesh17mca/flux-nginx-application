@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name:  nginx-app-deployment
+  namespace: nginx-app-namespace
+  labels:
+    name:  nginx-app-deployment
+    cd-system: flux-cd
+spec:
+  template:
+    metadata:
+      replicas: 1
+      labels:
+        name:  nginx-app
+        deployment-cd: flux
+    spec:
+      containers:
+      - image: nginx
+        name: nginx-app
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 0.1
+            memory: 500M
+          limits:
+            cpu: 0.25
+            memory: 1Gi
+        ports:
+        - containerPort: 80
+        
